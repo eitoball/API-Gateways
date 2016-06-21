@@ -40,7 +40,7 @@ $measurement_json = array(
 );
 
 // Repack the data in JSON
-$data_string = json_encode($measurement_json);
+$data_string = json_encode(array("mesurement" => $measurement_json));
 
 // POST to dev.safecast.org
 $ch = curl_init('http://dev.safecast.org/measurements.json?api_key='.$_GET["api_key"]);
